@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@types/react-bootstrap": "^0.32.35",
+    "@types/universal-cookie": "^3.0.0",
+    "crypto": "^1.0.1",
     "next": "14.0.4",
     "react": "^18",
     "react-bootstrap": "^2.9.2",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "universal-cookie": "^7.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

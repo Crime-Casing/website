@@ -1,9 +1,20 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import SearchBar from "@/components/header/search-bar";
+"use client";
+
+import Header from "@/components/header/header";
+import HomepageSection from "@/components/homepage/homepage-section";
+import path from "path";
+import { useEffect, useState } from "react";
+// import Cookie from "universal-cookie";
 
 export default function Home() {
-  return <main className={styles.main}>
-    <SearchBar/>
-  </main>;
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const cookie = new Cookie(null, { path: __dirname });
+
+  useEffect(() => {}, []);
+  return (
+    <main>
+      <Header />
+      <HomepageSection />
+    </main>
+  );
 }
