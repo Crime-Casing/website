@@ -12,6 +12,7 @@ import {
 import { ApiResponse } from "@/helpers/common-types";
 import { decryptData } from "@/helpers/cryption/encryption";
 import { AppProps } from "next/dist/shared/lib/router/router";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function ({ params }: AppProps): JSX.Element {
@@ -27,6 +28,7 @@ export default function ({ params }: AppProps): JSX.Element {
     ProcedureReqBody | undefined
   >();
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const getSearchResult = async () => {
     const endpoint = "http://localhost:3000/api/search";
@@ -62,6 +64,10 @@ export default function ({ params }: AppProps): JSX.Element {
     procedures?.forEach((procedure) => {
       if (updatedLatest?.id! < procedure.id) updatedLatest = procedure;
     });
+
+    if (!caseData || !procedures) {
+      router.push("/");
+    }
 
     setCaseData(caseData);
     setProceduresData(procedures);

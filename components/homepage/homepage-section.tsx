@@ -223,7 +223,7 @@ export default function (): JSX.Element {
                 aria-controls="flush-collapseThree"
               >
                 <h6 className="text-purple  fs-5 pt-2">
-                  I Can users access the Crime-casing remotely?
+                  Can users access the Crime-casing remotely?
                 </h6>
               </button>
             </h2>
@@ -252,8 +252,7 @@ export default function (): JSX.Element {
                 aria-controls="flush-collapseFour"
               >
                 <h6 className="text-purple  fs-5 pt-2">
-                  3. How does a Court Management System benefit the court
-                  system?
+                  How does a Court Management System benefit the court system?
                 </h6>
               </button>
             </h2>
